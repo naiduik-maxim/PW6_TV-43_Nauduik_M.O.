@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель управління</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="user-info">
+            <span id="userName" class="font-bold">Завантаження...</span>
+            <span id="userRole" class="tag">посада</span>
+        </div>
+        <button class="btn-red btn-small" id="btnLogout">Вийти</button>
+    </header>
+
+    <main class="container">
+        <h1>Моніторинг енергоефективності</h1>
+        
+        <div class="card card-wide">
+            <h3>Дії системи</h3>
+            <div class="dashboard-actions">
+                <button class="btn-blue" id="btnLines">Дані ліній</button>
+                <button class="btn-purple" id="btnReports">KPI звіти</button>
+            </div>
+        </div>
+
+        <div class="card card-wide">
+            <h3>Відповідь сервера:</h3>
+            <pre id="output">Виберіть дію для перегляду даних...</pre>
+        </div>
+    </main>
+
+    <script src="/dashboard.js"></script>
+</body>
+</html>

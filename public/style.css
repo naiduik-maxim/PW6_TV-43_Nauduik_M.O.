@@ -1,0 +1,226 @@
+:root {
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --success-color: #059669;
+    --success-hover: #047857;
+    --danger-color: #dc2626;
+    --danger-hover: #b91c1c;
+    --warning-color: #d97706;
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --radius: 12px;
+    --font-base: 'Inter', -apple-system, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-base);
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 450px;
+    border: 1px solid var(--border-color);
+}
+
+.card-wide {
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--card-bg);
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.font-bold {
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.tag {
+    background: var(--bg-color);
+    color: var(--primary-color);
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 1px solid var(--border-color);
+}
+
+label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-muted);
+}
+
+input, select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1.5px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+form input, 
+form select {
+    margin-bottom: 1rem;
+}
+
+form button {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s;
+}
+
+.btn-small {
+    width: auto;
+    padding: 6px 15px;
+    font-size: 0.875rem;
+}
+
+.btn-blue { background: var(--primary-color); color: white; }
+.btn-blue:hover { background: var(--primary-hover); transform: translateY(-1px); }
+
+.btn-green { background: var(--success-color); color: white; }
+.btn-green:hover { background: var(--success-hover); transform: translateY(-1px); }
+
+.btn-red { background: var(--danger-color); color: white; }
+.btn-red:hover { background: var(--danger-hover); }
+
+pre {
+    background: #0f172a;
+    color: #38bdf8;
+    padding: 1.5rem;
+    border-radius: 8px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.875rem;
+    overflow-x: auto;
+    margin-top: 1rem;
+}
+
+.error {
+    background: #fef2f2;
+    color: var(--danger-color);
+    padding: 0.75rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    margin-top: 1rem;
+    border-left: 4px solid var(--danger-color);
+}
+
+.error:empty {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .card-wide {
+        margin: 10px;
+        padding: 1.5rem;
+    }
+    
+    h1 { font-size: 1.5rem; }
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 1.25rem;
+    }
+
+    button {
+        padding: 1rem;
+    }
+
+    .flex-center {
+        align-items: flex-start;
+        padding-top: 40px;
+    }
+    
+    .dashboard-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    #btnLogout {
+        float: none !important;
+        margin-top: 20px;
+    }
+
+    .user-info .tag {
+        display: none;
+    }
+}

@@ -1,0 +1,25 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="flex-center">
+    <div class="card">
+        <h2>Реєстрація</h2>
+        <form id="registerForm">
+            <input type="text" id="name" placeholder="Ваше ім'я" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Пароль" required minlength="8">
+            <select id="role" required>
+                <option value="technologist">Технолог</option>
+                <option value="energy_manager">Енергоменеджер</option>
+                <option value="ceo">Директор</option>
+            </select>
+            <button type="submit" class="btn-green">Створити акаунт</button>
+        </form>
+        <p id="message" class="error"></p>
+        <p><a href="/index.html">Вже є акаунт?</a></p>
+    </div>
+    <script src="/register.js"></script>
+</body>
